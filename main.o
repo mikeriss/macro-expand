@@ -1,0 +1,20 @@
+struct memb {
+  unsigned short size;
+  unsigned short num;
+  char *count;
+  void *mem;
+};
+
+
+struct Array{
+ uint8_t x[10];
+};
+
+int main()
+{
+
+ static char dataMem_memb_count[10];
+ static struct Array dataMem_memb_mem[10];
+ static struct memb dataMem = {sizeof(struct Array), 10, dataMem_memb_count, (void *)dataMem_memb_mem};
+
+}
